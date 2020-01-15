@@ -1,4 +1,4 @@
-from python12306.utils.data_structure import TourMapping, SeatMapping, TicketMapping
+#from python12306.utils.data_structure import TourMapping, SeatMapping, TicketMapping
 
 TYPE_LOGIN_NORMAL_WAY = 0
 TYPE_LOGIN_OTHER_WAY = 1
@@ -87,9 +87,13 @@ SUBMIT_ERR_MESSAGES_LIST = [
 
 ORDER_NOT_FINISHED_MESSAGE = {"msg": "您还有未处理的订单"}
 
-TourTypeList = [TourMapping(v) for v in TOUR_DATA]
-SeatTypeList = [SeatMapping(v) for v in SEAT_DATA]
-TicketTypeList = [TicketMapping(v) for v in TICKET_DATA]
+#TourTypeList = [TourMapping(v) for v in TOUR_DATA]
+#SeatTypeList = [SeatMapping(v) for v in SEAT_DATA]
+#TicketTypeList = [TicketMapping(v) for v in TICKET_DATA]
+TourTypeList = [1,2,3,4,5]
+SeatTypeList = [1,2,3,4,5]
+TicketTypeList = [1,2,3,4,5]
+
 
 FREE_CAPTCHA_URL = "https://12306.jiedanba.cn/api/v2/getCheck"
 FREE_CAPTCHA_CHECK_URL = "https://check.huochepiao.360.cn/img_vcode"

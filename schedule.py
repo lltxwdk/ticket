@@ -4,6 +4,7 @@ from itertools import product
 
 from config import Config
 from utils.log import logger
+from logic.login.login import normalLogin
 
 from utils.cdn import cdnHandle
 
@@ -15,7 +16,12 @@ class Schedule(object):
     order_tickets = []
 
     def login(self):
+        count = 0
+        while self.retryLoginTimes >= count:
+            loginInstance = normalLogin()
+            logger.info("正在为您登录")
 
+            count += 1
         return True
 
     @staticmethod

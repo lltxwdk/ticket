@@ -2,7 +2,7 @@
 import random
 import time
 
-from python12306.utils.data_structure import UrlMapping
+#from python12306.utils.data_structure import UrlMapping
 
 LOGIN_URLS = {
     'normal': {
@@ -415,11 +415,11 @@ DEVICE_FINGERPRINT_URL = {
 }
 
 
-USER_CHECK_URL_MAPPING = UrlMapping(USER_CHECK_URL)
-PASSENGER_URL_MAPPING = UrlMapping(PASSENGER_URL)
-LOGIN_URL_MAPPING = {key: {key1: UrlMapping(v1) for key1, v1 in v.items()} for key, v in LOGIN_URLS.items()}
-QUERY_URL_MAPPING = UrlMapping(QUERY_URL)
-DEVICE_FINGERPRINT_MAPPING = UrlMapping(DEVICE_FINGERPRINT_URL)
-SUBMIT_URL_MAPPING = {key: {key1: UrlMapping(v1) for key1, v1 in v.items()} for key, v in SUBMIT_URLS.items()}
-FAST_SUBMIT_URL_MAPPING = {key: UrlMapping(v) for key, v in FAST_SUBMIT_URLS.items()}
-ORDER_NO_COMPLETE_MAPPING = UrlMapping(ORDER_NO_COMPLETE_URL)
+#USER_CHECK_URL_MAPPING = UrlMapping(USER_CHECK_URL)
+#PASSENGER_URL_MAPPING = UrlMapping(PASSENGER_URL)
+#LOGIN_URL_MAPPING = {key: {key1: UrlMapping(v1) for key1, v1 in v.items()} for key, v in LOGIN_URLS.items()}
+#QUERY_URL_MAPPING = UrlMapping(QUERY_URL)
+#DEVICE_FINGERPRINT_MAPPING = UrlMapping(DEVICE_FINGERPRINT_URL)
+#SUBMIT_URL_MAPPING = {key: {key1: UrlMapping(v1) for key1, v1 in v.items()} for key, v in SUBMIT_URLS.items()}
+#FAST_SUBMIT_URL_MAPPING = {key: UrlMapping(v) for key, v in FAST_SUBMIT_URLS.items()}
+#ORDER_NO_COMPLETE_MAPPING = UrlMapping(ORDER_NO_COMPLETE_URL)
