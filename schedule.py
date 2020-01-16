@@ -20,6 +20,7 @@ class Schedule(object):
         while self.retryLoginTimes >= count:
             loginInstance = normalLogin()
             logger.info("正在为您登录")
+            status, msg = loginInstance.login()
 
             count += 1
         return True
@@ -80,7 +81,8 @@ class Schedule(object):
             logger.info("12306系统每天 23:00 - 6:00 之间 维护中, 程序暂时停止运行")
         
         mainTime = self.deltaMaintainTime()
-        
+        if not mainTime:
+            return 
         logger.info("{0}小时 {1}分钟 {2}秒之后重新启动".format(
                 mainTime.seconds // 3600,
                 (mainTime.seconds // 60) % 60,
