@@ -8,8 +8,11 @@ from utils.log import logger
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 
+from logic.login.captcha import Captcha
 
 from utils.data_loader import localSimpleCache
+from utils.network import sendRequests, jsonStatus
+from config import Config
 
 from data.session import LOGIN_SESSION
 from data.url_conf import LOGIN_URL_MAPPING
@@ -58,12 +61,28 @@ class normalLogin(object):
         for value in cookies:
             value.pop('httpOnly', None)
             value.pop('expiry', None)
-            LOGIN_SESSION.cookies.set(**v)
+            LOGIN_SESSION.cookies.set(**value)
         logger.info("已经获取设备指纹")
         return True, "已经获取设备指纹"
 
+    def passPortRedirect(self):
+        sendRequests(LOGIN_SESSION, self.URLS["userLoginRedirect"])
 
+    def uamTk(self):
+        jsonData = sendRequests(LOGIN_SESSION, self.URLS["uamtk"], data={'appid': 'otn'})
+        logger.info(jsonData)
+        result, msg = jsonStatus(jsonData, ["result_message", "newapptk"])
+        if not result:
+            return result, msg, None
+        else:
+            return result, msg, jsonData["newapptk"]
 
+    def uamAuthClient(self, apptk):
+        jsonResponse = sendRequests(LOGIN_SESSION, self.URLS['uamauthclient'], data={'tk': apptk})
+        status, msg = jsonStatus(jsonResponse, ["username", "result_message"])
+        if status:
+            logger.info("欢迎 {0} 登录".format(jsonResponse["username"]))
+        return status, msg
 
     def login(self):
         if not LOGIN_SESSION.cookies.get("RAIL_EXPIRATION") or \
@@ -71,6 +90,37 @@ class normalLogin(object):
             status, msg = self.init()
             if not status:
                 return status, msg
-           
+
+        captcha = Captcha("normal")
+        status, msg = captcha.verify()
+        if not status:
+            logger.info("验证码校验失败")
+            return status,msg
+
+        payload = {
+            'username': Config.train_account.user,
+            'password': Config.train_account.pwd,
+            'appid': 'otn',
+            'answer': captcha.results
+        }
+
+        jsonResponse = sendRequests(LOGIN_SESSION, self.URLS['login'], data=payload)
+        result, msg = jsonStatus(jsonResponse, [], '0')
+
+        if not result:
+            return (False, jsonResponse.get("result_message", None)) \
+                if isinstance(jsonResponse, dict) else (False, '登录接口提交返回数据出现问题')
+
+        self.passPortRedirect()
+        result, msg, apptk = self.uamTk()
+
+        if not result:
+            logger.info(msg)
+            return False, msg
+        status, msg = self.uamAuthClient(apptk)
+        return status, msg
+
+
+
 
           

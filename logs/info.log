@@ -54,3 +54,94 @@
 2020-01-16 18:03:04,066 - root - INFO - 使用selenium获取完整cookie
 2020-01-16 18:27:56,839 - root - INFO - 正在为您登录
 2020-01-16 18:27:58,711 - root - INFO - 使用selenium获取完整cookie
+2020-01-17 09:41:01,907 - root - INFO - 正在为您登录
+2020-01-17 09:41:07,956 - root - INFO - 使用selenium获取完整cookie
+2020-01-17 09:42:07,166 - root - INFO - 导出包含设备指纹的cookie
+2020-01-17 09:58:15,810 - root - INFO - 正在为您登录
+2020-01-17 09:58:15,811 - root - INFO - 使用缓存过的cookie
+2020-01-17 09:58:15,812 - root - INFO - 已经获取设备指纹
+2020-01-17 09:59:16,733 - root - INFO - 正在为您登录
+2020-01-17 09:59:16,734 - root - INFO - 使用缓存过的cookie
+2020-01-17 09:59:16,735 - root - INFO - 已经获取设备指纹
+2020-01-17 15:08:02,756 - root - INFO - 正在为您登录
+2020-01-17 15:08:50,580 - root - INFO - 使用缓存过的cookie
+2020-01-17 15:08:50,582 - root - INFO - 已经获取设备指纹
+2020-01-17 15:20:26,093 - root - INFO - 正在为您登录
+2020-01-17 15:20:34,172 - root - INFO - 使用缓存过的cookie
+2020-01-17 15:20:49,266 - root - INFO - 已经获取设备指纹
+2020-01-17 15:23:52,051 - root - INFO - 正在为您登录
+2020-01-17 15:23:58,943 - root - INFO - 使用缓存过的cookie
+2020-01-17 15:23:58,944 - root - INFO - 已经获取设备指纹
+2020-01-17 15:25:34,578 - root - INFO - 
+            -----------------
+            | 0 | 1 | 2 | 3 |
+            -----------------
+            | 4 | 5 | 6 | 7 |
+            ----------------- 
+2020-01-17 15:27:07,364 - root - INFO - 请求 url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:27:07,611 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Get 参数 None
+2020-01-17 15:27:07,612 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Post 参数 {'answer': '40,40,250,40,180,110', 'rand': 'sjrand', 'login_site': 'E'}
+2020-01-17 15:27:07,613 - root - INFO - 返回response url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:27:07,614 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check 返回值 {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:27:07,614 - root - INFO - 验证码校验结果: {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:27:27,921 - root - INFO - 请求 url https://kyfw.12306.cn/passport/web/login
+2020-01-17 15:27:28,314 - root - INFO - https://kyfw.12306.cn/passport/web/login Get 参数 None
+2020-01-17 15:27:28,317 - root - INFO - https://kyfw.12306.cn/passport/web/login Post 参数 {'username': '375563752@qq.com', 'password': 'll1989718616', 'appid': 'otn', 'answer': '40,40,250,40,180,110'}
+2020-01-17 15:27:28,318 - root - INFO - 返回response url https://www.12306.cn/mormhweb/logFiles/error.html
+2020-01-17 15:27:50,976 - root - INFO - 登录接口提交返回数据出现问题
+2020-01-17 15:27:50,977 - root - INFO - 登录失败, 重试1次
+2020-01-17 15:27:50,977 - root - INFO - 正在为您登录
+2020-01-17 15:27:57,803 - root - INFO - 
+            -----------------
+            | 0 | 1 | 2 | 3 |
+            -----------------
+            | 4 | 5 | 6 | 7 |
+            ----------------- 
+2020-01-17 15:28:18,297 - root - INFO - 请求 url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:28:18,483 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Get 参数 None
+2020-01-17 15:28:18,484 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Post 参数 {'answer': '40,40,40,110', 'rand': 'sjrand', 'login_site': 'E'}
+2020-01-17 15:28:18,485 - root - INFO - 返回response url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:28:18,485 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check 返回值 {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:28:18,493 - root - INFO - 验证码校验结果: {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:28:18,493 - root - INFO - 请求 url https://kyfw.12306.cn/passport/web/login
+2020-01-17 15:28:18,682 - root - INFO - https://kyfw.12306.cn/passport/web/login Get 参数 None
+2020-01-17 15:28:18,683 - root - INFO - https://kyfw.12306.cn/passport/web/login Post 参数 {'username': '375563752@qq.com', 'password': 'll1989718616', 'appid': 'otn', 'answer': '40,40,40,110'}
+2020-01-17 15:28:18,684 - root - INFO - 返回response url https://www.12306.cn/mormhweb/logFiles/error.html
+2020-01-17 15:28:21,860 - root - INFO - 登录接口提交返回数据出现问题
+2020-01-17 15:28:21,861 - root - INFO - 登录失败, 重试2次
+2020-01-17 15:28:21,861 - root - INFO - 正在为您登录
+2020-01-17 15:28:24,594 - root - INFO - 
+            -----------------
+            | 0 | 1 | 2 | 3 |
+            -----------------
+            | 4 | 5 | 6 | 7 |
+            ----------------- 
+2020-01-17 15:28:40,337 - root - INFO - 请求 url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:28:40,552 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Get 参数 None
+2020-01-17 15:28:40,553 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Post 参数 {'answer': '250,40,40,110', 'rand': 'sjrand', 'login_site': 'E'}
+2020-01-17 15:28:40,553 - root - INFO - 返回response url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:28:40,560 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check 返回值 {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:28:40,561 - root - INFO - 验证码校验结果: {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:28:40,561 - root - INFO - 请求 url https://kyfw.12306.cn/passport/web/login
+2020-01-17 15:28:40,759 - root - INFO - https://kyfw.12306.cn/passport/web/login Get 参数 None
+2020-01-17 15:28:40,759 - root - INFO - https://kyfw.12306.cn/passport/web/login Post 参数 {'username': '375563752@qq.com', 'password': 'll1989718616', 'appid': 'otn', 'answer': '250,40,40,110'}
+2020-01-17 15:28:40,760 - root - INFO - 返回response url https://www.12306.cn/mormhweb/logFiles/error.html
+2020-01-17 15:32:29,772 - root - INFO - 正在为您登录
+2020-01-17 15:32:31,921 - root - INFO - 使用缓存过的cookie
+2020-01-17 15:32:31,923 - root - INFO - 已经获取设备指纹
+2020-01-17 15:32:38,175 - root - INFO - 
+            -----------------
+            | 0 | 1 | 2 | 3 |
+            -----------------
+            | 4 | 5 | 6 | 7 |
+            ----------------- 
+2020-01-17 15:33:02,105 - root - INFO - 请求 url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:33:02,365 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Get 参数 None
+2020-01-17 15:33:02,366 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check Post 参数 {'answer': '40,40,40,110', 'rand': 'sjrand', 'login_site': 'E'}
+2020-01-17 15:33:02,366 - root - INFO - 返回response url https://kyfw.12306.cn/passport/captcha/captcha-check
+2020-01-17 15:33:02,373 - root - INFO - https://kyfw.12306.cn/passport/captcha/captcha-check 返回值 {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:33:02,373 - root - INFO - 验证码校验结果: {'result_message': '验证码校验成功', 'result_code': '4'}
+2020-01-17 15:33:02,374 - root - INFO - 请求 url https://kyfw.12306.cn/passport/web/login
+2020-01-17 15:33:02,720 - root - INFO - https://kyfw.12306.cn/passport/web/login Get 参数 None
+2020-01-17 15:33:02,721 - root - INFO - https://kyfw.12306.cn/passport/web/login Post 参数 {'username': '375563752@qq.com', 'password': 'll1989718616', 'appid': 'otn', 'answer': '40,40,40,110'}
+2020-01-17 15:33:02,721 - root - INFO - 返回response url https://www.12306.cn/mormhweb/logFiles/error.html

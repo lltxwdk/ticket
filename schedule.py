@@ -21,8 +21,18 @@ class Schedule(object):
             loginInstance = normalLogin()
             logger.info("正在为您登录")
             status, msg = loginInstance.login()
-
-            count += 1
+            if not status:
+                count += 1
+                logger.info(msg)
+                logger.info("登录失败, 重试{0}次".format(count)) if self.retryLoginTimes >= count else ""
+                continue
+            else:
+                logger.info("登录成功")
+                break
+    
+        if self.retryLoginTimes < count:
+            logger.info("重试次数已经超过设置")
+            return False
         return True
 
     @staticmethod

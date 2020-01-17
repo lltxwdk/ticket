@@ -117,11 +117,11 @@ basic_config:
   black_train_time: 5
 
 train_account:
-  user: "12306账号"
-  pwd: "12306密码"
+  user: "375563752@qq.com"
+  pwd: "ll1989718616"
 
 # 是否使用自动打码平台, True or False
-auto_code_enable: True
+auto_code_enable: False
 
 # 是否保存图片在当前文件夹内，如果开启则直接保存图片到当前文件夹内
 # 如果不开启则直接前台显示选择
@@ -141,11 +141,11 @@ auto_code_account_ruokuai:
 
 # #  邮箱配置，如果抢票成功，将通过邮件配置通知给您
 email_config:
-  from_email: "发件人邮箱地址"
+  from_email: "375563752@qq.com"
   notice_email_list:
-    - "通知人邮箱地址"
-  username: "发件人的登录邮箱用户名"
-  password: "发件人的邮箱密码"
+    - "lltxwdk@163.com"
+  username: "375563752@qq.com"
+  password: "nihainengdaobu"
   # email 网关
   email_gateway: "smtp.qq.com"
   # email 网关端口
